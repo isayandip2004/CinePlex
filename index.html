@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0x">
+    <title>CinePlex</title>
+    <style>
+        body {
+            margin-left: 2px;
+            width: 95%;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 1230px;
+            max-width: fit-content;
+        }
+
+        nav {
+            padding: 0 0px;
+            width: 100%;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .navbar-one {
+            width: 1476px;
+            list-style: none;
+            justify-content: right;
+            background-color: #ffffff;
+            cursor: pointer;
+            padding-top: 2px;
+        }
+
+        .navbar-two {
+            max-width: 1500px;
+            padding-left: 60px;
+        }
+
+        .flex {
+            list-style: none;
+            margin-right: 20px 15px 5px;
+            ;
+
+        }
+
+        .right>div {
+            margin-right: 2px;
+        }
+
+        .flex1 {
+            list-style: none;
+            display: flex;
+            margin-left: 700px;
+            margin-right: 304px;
+            padding-right: 30px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 500px;
+            padding-left: 0px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: medium;
+        }
+
+        .flex1 li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .flex1 li a:hover {
+            background-color: gray;
+        }
+
+        .cources-inside-container {
+            margin: 20;
+            padding: 20px;
+            background-image: url(https://wallpaperaccess.com/full/4215920.jpg);
+            opacity: initial;
+            background-size: cover;
+            width: 1475px;
+            height: 400px;
+            text-align: center;
+            font-size: large;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .cources-inside-container h1 {
+            text-align: center;
+            padding-top: 100px;
+            color: rgb(252, 236, 4);
+        }
+
+        #button{
+            margin-top: 70px;
+            margin-left: 620px;
+            padding-top: 25px;
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-bottom: 0px;
+            border: 1px solid rgb(221, 4, 4);
+            border-radius: 12px;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(222, 4, 4);
+            text-overflow: inherit;
+            cursor: pointer;
+            font-size: large;
+            
+        }
+
+        #button:hover{
+            background-color: rgb(255, 0, 0);
+            font-size: larger;
+            box-shadow: 0px 4px 5px 0px rgba(26, 25, 25, 0.71);
+            
+        }
+
+        .navbar {
+            background-color: rgb(255, 255, 255);
+            margin-left:1px;
+            margin-right: 1px;
+            margin-top: 3px;
+            padding-left: 180px;
+            padding-right: 80px;
+            border: 1px 1px 2px 2px solid black;
+        }
+        #header{
+            max-width: fit-content;
+        }
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 13px 22px 11px 30px;
+        }
+
+        .adobe {
+            height: 50px;
+            width: 130px;
+            padding-top: 9%;
+            opacity: 56%;
+        }
+
+        .adobe:hover {
+            opacity: 90%;
+        }
+
+        .lg {
+            height: 75px;
+            width: 95px;
+            opacity: 70%;
+        }
+
+        .lg:hover {
+            opacity: 500%;
+        }
+
+        .epic {
+            height: 45px;
+            padding-top: 30%;
+            opacity: 45%;
+        }
+
+        .epic:hover {
+            opacity: 70%;
+        }
+
+        .story {
+            height: 30px;
+            width: 113px;
+            padding-top: 17%;
+            opacity: 56%;
+        }
+
+        .story:hover {
+            opacity: 70%;
+        }
+
+        .msi {
+            height: 115px;
+            width: 113px;
+            margin: -15px;
+            opacity: 43%;
+        }
+
+        .msi:hover {
+            opacity: 63%;
+        }
+
+        .insta {
+            height: 45px;
+            width: 100px;
+            padding-top: 10%;
+            opacity: 38%;
+        }
+
+        .insta:hover {
+            opacity: 60%;
+        }
+
+        .manfrotto {
+            height: 42px;
+            width: 200px;
+            padding-top: 1.5%;
+            margin-right: 20%;
+            opacity: 65%;
+        }
+
+        .manfrotto:hover {
+            opacity: 150%;
+        }
+
+        .cources{
+            margin-left: 298px;
+            padding: 40px;
+
+        }
+
+        .cources-part{
+            padding: 0px;
+            border-radius: 5px;
+        }
+
+        .cources-heading{
+            margin: 20px;
+            text-align: center;
+            padding: 2px;
+        }
+
+        .cources-grid{
+            width: 250px;
+            height: 230px;
+            display: flex;
+            margin-left: 65px;
+            margin-right: 20px;
+            overflow: visible;
+        }
+
+        .cources-grid-one{
+            width: 250px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cources-grid-two{
+            padding: 3px;  
+        }
+
+        .cources-grid-three{
+            padding: 5px;
+            text-align: center;
+            
+        }
+
+        #img{
+            border: 1px solid white;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #img:hover{
+            border: 2px solid rgba(255, 255, 255, 0.189);
+            box-shadow: 4px 4px 5px 5px rgba(103, 96, 96, 0.625);
+
+        }
+
+        #description{
+            text-align: center ;
+            font-size: medium;
+        }
+        #description:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        .reviews{
+            max-width: fit-content;
+            margin-left: 350px;
+            height: 304px;
+        }
+
+        .reviews-grid{
+            margin: 20px;
+            height: 250px;
+        }
+
+        .grid-one{
+            display: flex;
+        }
+
+        .grid-one-design{
+            display: flex;
+            margin: 20px;
+            height: 80px;
+            float: left;
+        }
+
+        .grid-two{
+            display: flex;
+        }
+
+        .grid-two-design{
+            display: flex;
+            margin: 20px;
+            height: 80px;
+            float: left;
+        }
+
+        #dp{
+            border: 1px solid rgb(255, 255, 255);
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            
+        }
+
+        #namebar{
+            display: flex;
+            height: 70px;
+            width: 210px;
+            overflow: visible;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-right: 5px;
+            justify-content: space-around;
+        }
+
+        #namebar img{
+            padding: 0px;
+        }
+        #namebar h5{
+            padding: 0;
+        }
+        #namebar h5:hover{
+            color: red;
+        }
+
+        #review{
+            height: 100px;
+            width: 470px;
+            float: right;
+            margin-left: 0;
+            overflow: auto;
+            padding: 10px;
+        }
+        .footer{
+            margin-top: 20px;
+            background-color: black;
+            height: 550px;
+            width: 1524px;
+            color: gray;
+            text-align: center;
+        }
+        .footer nav li{
+            list-style: none;
+            background-color: black;
+            color: gray;
+            display:inline-flex;
+            justify-content: space-around5;
+            text-align: center;
+
+        }
+        .footer nav {
+            text-align: center;
+        }
+        #ab:hover{
+            border: 2px solid red;
+            border-radius: 10px;
+            
+        }
+        #abc:hover{
+            border: 2px solid red;
+            border-radius: 10px;
+            
+        }
+        #abcd:hover{
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        .underline{
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.75),rgba(255,255,255,0));
+        }
+        .footer{
+            margin-top: 20px;
+            background-color: black;
+            height: 550px;
+            width: 1525px;
+            color: white;
+            text-align: center;
+        }
+        .footer nav li{
+            list-style: none;
+            background-color: black;
+            color: gray;
+            display:inline-flex;
+            justify-content: space-around5;
+            text-align: center;
+        }
+        .footer nav {
+            text-align: center;
+        }
+        #header{
+            max-width: fit-content;
+        }
+        #ab:hover{
+            border: 2px solid red;
+            border-radius:  10px;
+            
+        }
+        #abc:hover{
+            border: 2px solid red;
+            border-radius: 10px;
+            
+        }
+        #abcd:hover{
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        .footer #final nav li{
+            list-style: none;
+            color: white;
+         }
+        #r:hover{
+            color: red;
+            cursor: pointer;
+        }
+        #q:hover{
+            color: red;
+            cursor: pointer;
+        }
+        #s:hover{
+            color: red;
+            cursor: pointer;
+        }
+           </style>
+</head>
+
+<body>
+    <nav class="navbar-one flex">
+        <div class="right flex">
+            <li href="#"><a style="padding: 20px;"><img src="https://cdn4.iconfinder.com/data/icons/social-media-line-3/64/Social-media-expand_Youtube-512.png" alt="YouTube" height="50px"></a></li>
+            <li href="#"><a style="padding: 20px;"><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Instagram" height="40px"></a></li>
+            <li href="#"><a style="padding: 20px;"><img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="facebook" height="40px"></a></li>
+            <li href="#"><a style="padding: 20px;"><img src="https://www.pngkey.com/png/full/7-78730_white-twitter-logo-png-twitter-icon-png.png" alt="twitter" height="40px"></a></li>
+        </div>
+    </nav>
+
+    <nav class="navbar-two flex">
+        <div class="logo">
+            <h1><a href="#"><img src="/frontend/Projects/icon.png" alt="logo" style="height: 50px;"></a></h1>
+        </div>
+        <ul class="flex1">
+            <li><a href="#" style="padding: 20px;">home</a></li> <br>
+            <li><a href="#" style="padding: 20px;">courses</a></li> <br>
+            <li><a href="#" style="padding: 20px;">videos</a></li> <br>
+            <li><a href="#" style="padding: 20px;">tutorials</a></li> <br>
+            <li><a href="#" style="padding: 20px;">support</a></li>
+        </ul>
+    </nav>
+
+    <div class="cources-container">
+        <div class="cources-conntainer" id="home">
+            <div class="cources-inside-container">
+                <h1 class="Cources-container-headline text">Learn Filmmaking, Video Editing And VFX</h1>
+                <h2 class="cources-container text" style="color: rgb(237, 233, 177);">Join Now <b>400,000</b> "Students in our" <b> Award Winning</b> "Cources"</h2>
+                <div class="cources-container-button">
+                    <div id="button" type="button text"  style="color: #ffffff"><b type="text">Browse Content</b></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="header">
+            <nav class="navbar">
+                <ul>
+                    <li><img class="adobe" src="/frontend/Projects/adobe.png"></img></li>
+                    <li><img class="lg" src="data:image/png;base64,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"></img></li>
+                    <li><img class="epic" src="data:image/png;base64,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"></img></li>
+                    <li><img class="story" src="/frontend/Projects/other.jpg"></img></li>
+                    <li><img class="msi" src="https://i.etsystatic.com/23511185/r/il/ff0511/2384952013/il_794xN.2384952013_6bqf.jpg"></img></li>
+                    <li><img class="insta" src="data:image/png;base64,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"></img></li>
+                    <li><img class="manfrotto" src="/frontend/Projects/man.png"></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cources">
+            <div class="cources-part">
+                <h2 class="cources-heading">Popular Cources</h2>
+                    <div class="cources-grid">
+                        <div class="cources-grid-one">
+                            <div class="1st-cource">
+                                <div class="1st-course-inside">
+                                    <figure id="1st-one">
+                                        <a href="#">
+                                            <img id="img" style="width:150px" src="https://www.cinecom.net/wp-content/uploads/2022/09/2h0wxcgddlg-350x197.jpg">
+                                        </a>
+                                    </figure>
+                                    <h3 id="description">Learn Filmmaking From Beginner To Pro</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cources-grid-two">
+                            <div class="2nd-cource">
+                                <div class="2nd-cource-inside">
+                                    <figure id="2nd-one">
+                                        <a href="#">
+                                            <img id="img" style="width: 150px;"  src="https://www.cinecom.net/wp-content/uploads/2022/04/z-ounwm_zvs-350x197.jpg" alt="">
+                                        </a>
+                                    </figure>
+                                    <h3 id="description">Unreal Engine 5 For Beginners: Learn The Basics Of Virtual Production</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cources-grid-three">
+                            <div class="3rd-cource">
+                                <div class="3rd-cource-inside">
+                                    <figure id="3rd-one">
+                                        <a href="#">
+                                            <img id="img" style="width: 150px;" src="https://www.cinecom.net/wp-content/uploads/2023/04/Advanced-Premiere-Pro-Thumbnail-350x197.jpg"> 
+                                        </a>
+                                    </figure>
+                                    <h3 id="description">Video Editing With Adobe Premiere Pro for Advanced Users</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>    
+
+        <div class="reviews">
+            <div class="reviews-grid">
+                <div class="grid-one">
+                    <div class="grid-one-design">
+                        <div id="dp">
+                            <img style="width: 80px;" src="https://www.cinecom.net/wp-content/uploads/2023/01/Chris-Jonson.jpg" alt="">
+                        </div>
+                        <div id="namebar">    
+                            <img style="width: 20px;
+                            height: 20px; padding-top: 20px;" src="https://www.pngfind.com/pngs/m/32-321961_web-globe-icon-png-transparent-png.png" alt="">
+                            <h5>Chris Jonson</h5>
+                            <img style="width: 60px; height: 40px; padding-top: 10px;" src="https://w7.pngwing.com/pngs/694/571/png-transparent-rating-review-five-star-rating-five-star-review-feedback-customer-feedback.png">
+                        </div>
+                    </div>    
+                    <div id="review">
+                        <p><i>Great information. Once I started, i was hooked. Jordy and the team put things into simple, easy to understand bits of information that allows you to see, try and then explore your own ideas</i></p>
+                    </div>
+                </div>    
+                <div class="grid-two">
+                    <div class="grid-two-design">
+                        <div id="dp">
+                            <img style="width: 80px;" src="https://www.cinecom.net/wp-content/uploads/2023/01/Winston-Ledgister.jpg">
+                        </div>
+                        <div id="namebar">
+                            <img style="width: 20px; height: 20px; padding-top: 20px;" src="https://cdn-icons-png.flaticon.com/512/87/87390.png">
+                            <h5>Winston Lui</h5>
+                            <img style="width: 60px; height: 40px; padding-top: 10px;" src="https://w7.pngwing.com/pngs/694/571/png-transparent-rating-review-five-star-rating-five-star-review-feedback-customer-feedback.png">
+                        </div>
+                    </div>    
+                    <div id="review">
+                        <p><i>All the courses I’ve taken so far were exciting and informative. Most importantly they had steps that could be easily followed and replicated making practice very simple.</i></p>
+                    </div>
+                </div>
+                </div>    
+            </div>
+        </div>
+        <div>
+            <h2 style="margin-left: 58%;" > YouTube </h2>
+            <div style="margin-left: 25%;">
+            <iframe width="304" height="315" src="https://www.youtube.com/embed/QvcMjpIuL8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="304" height="315" src="https://www.youtube.com/embed/rAsUDe-DPxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="304" height="315" src="https://www.youtube.com/embed/Uopcm4X0kFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <p>  <br>
+                  <br>
+                <h3>And as Always... Stay Creative!</h3>
+                <h4>Since 2014 we've been inspiring the online world about creative filmmaking techniques, video editing and visual effects</h4></p>
+                <nav>
+                    <br>
+                    <ul>
+                        <li id="ab"><button  style="border-color: white; border-radius: 10px; background-color: black; color: white; height: 50px ; width: 150px;"><strong>👨‍💻  About us</strong></button></li>
+                        <li id="abc"><button  style="border-color: white; border-radius: 10px; background-color: black; color: white; height: 50px ; width: 150px;"><strong>✉  Contact us</strong></button></li>
+                        <li id="abcd"><button  style="border-color: white; border-radius: 10px; background-color: black; color: white; height: 50px ; width: 150px"><strong>💼 Jobs</strong></button></li>
+                    </ul>
+                    <br>
+                    <hr class="underline">
+                    <br>
+                    <br>
+                    <div id="final">
+                    <nav style="margin-left: 20px; margin-right: 20px; text-align: right; display:inline;">
+                        <ul>
+                            <li id="d" style="margin: 20px;"><p id="r">Privacy policy</p></li>
+                            <li id="e" style="margin: 20px;"><p id="q">Terms of service</p></li>
+                            <li id="f" style="padding: 20px;"><p id="s">Refund policy</p></li>
+                        </ul>
+                    </nav>
+                    </div>
+                
+                <p style="text-align: left;margin-left: -70px; padding-left: 10%;margin-top: -85px;">© 2023 Cineplex Belgium BV</p>
+        </div>
+</body>
+</html>
